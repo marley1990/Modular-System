@@ -547,7 +547,6 @@ var pc_point = [[0,0,0],[0,0,1.3],[0,0.01,1.3],[0,.79,1.3],[0,0.8,1.3],[0,0.8,0]
 var pc_end = BEZIER(S0)([[0,0,0],[0,0.8,0]])
 
 var pc_nubs = NUBS(S0)(1)([0,0,1,2,3,4,5,6,6])(pc_point)
-
 var pc_point1 = [[-0.05,0,0],[-0.05,0,1.4],[-0.05,0.01,1.4],[-0.05,.79,1.4],[-0.05,0.8,1.4],[-0.05,0.8,0],[-0.05,0.8,0]]
 
 var pc_nubs1 = NUBS(S0)(1)([0,0,1,2,3,4,5,6,6])(pc_point1)
@@ -586,6 +585,7 @@ var torus = function (R, r) {
     return [u,v,w];
   }
 }
+
 
 var domainWheel = DOMAIN([[0,2*PI],[0,1]])([20,20])
 
@@ -631,6 +631,7 @@ var final_model = STRUCT([final_model1,final_model2,cyl,support_result,cubo_resu
   R([0,1])(PI)(computer_array),pc,R([0,1])(PI)(pc)])
 
 DRAW(final_model)
+
 
 function Animate() {
   var message = 'Do you want to activate the movement of the linx model?'
