@@ -632,4 +632,18 @@ var final_model = STRUCT([final_model1,final_model2,cyl,support_result,cubo_resu
 
 DRAW(final_model)
 
+function Animate() {
+  var message = 'Do you want to activate the movement of the linx model?'
 
+  var choice = confirm(message)
+
+  if (choice == true) {
+    setInterval(function () {
+    final_model.rotate([0,1], PI/45)/*.rotate([1,2],PI/45).rotate([0,2],PI/45)*/;
+    }, 10);
+  }
+  
+
+}
+
+Animate()
